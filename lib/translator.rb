@@ -18,8 +18,10 @@ def get_english_meaning(file_path, emoticon)
   
   temp_string = "" #1st it = "sad"
   library.each do |key, value|
-    if library[key][:japanese] == emoticon
+    # if library[key][:japanese] == emoticon
+    if value[:japanese] == emoticon
       temp_string = key
+      binding.pry
       return temp_string
     end
   end 
